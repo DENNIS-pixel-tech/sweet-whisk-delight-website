@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SWEET WHISK DELIGHT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <h1 class="logo">Sweet Whisk Delight</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="cakes.html">Cakes</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="page">
+  <h2>Contact Us</h2>
+  <p style="text-align: center;">We’d love to hear from you! Fill in the form below to place an order or ask a question.</p>
+  
+  <div class="contact-info">
+    <p>📞📳 Call or WhatsApp: <strong>+254 759 924 567</strong></p>
+    <p>📥 Email: <strong>elses8826@gmail.com</strong></p>
+    <p>📍 Location: Limuru, Kamirithu</p>
+  </div>
+
+  <form class="contact-form" id="whatsappForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+    <label for="message">Your Message or Cake Order</label>
+    <textarea id="message" name="message" rows="5" placeholder="Type your message here... e.g., 'I'd like to order the Pink Flower Cake for Saturday...'" required></textarea>
+
+    <button type="submit">Send Message via WhatsApp</button>
+  </form>
+
+  <script>
+  document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const phoneNumber = "254759924567";
+      const name = document.getElementById("name").value;
+      const userPhone = document.getElementById("phone").value;
+      const message = document.getElementById("message").value;
+
+      const whatsappMessage = 
+  `Hello Sweet Whisk Delight!%0A%0A👤 Name: ${name}%0A📞 Contact: ${userPhone}%0A💬 Message:%0A${message}`;
+
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+      window.open(whatsappURL, "_blank");
+  });
+  </script>
+</section>
+ <footer>
+    <p>&copy; 2026 Sweet Whisk Delight — Baked with Love in Kamirithu 🍰</p>
+    
+    <div class="social-media">
+        <a href="https://wa.me/254759924567" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="https://www.instagram.com/munyakadennis90/?hl=en" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://web.facebook.com/dennis.munyaka.2025/" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@dennis_m_m2.0" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>
